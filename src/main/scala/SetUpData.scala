@@ -20,15 +20,13 @@ object SetUpData extends App {
 
   import spark.implicits._
 
-  // 2. Read from parquet file the vertices
-  // ONLY TO SETUP
+  // 2. Write Clients data to parquet file
   val clients: List[Client] = List(
     Client(1, "John Doe", 27), Client(2, "John Doe", 27), Client(3, "John Doe", 27),
     Client(4, "John Doe", 27), Client(5, "John Doe", 27), Client(6, "John Doe", 27))
   spark.createDataset(clients).write.parquet("data/clients")
 
-  // 3. Read from parquet file the edges
-  // ONLY TO SETUP
+  // 3. Write Transfers data to parquet file
   val transfers: List[Transfer] = List(
     Transfer(1, 4), Transfer(4, 1),
     Transfer(2, 4), Transfer(4, 2),
