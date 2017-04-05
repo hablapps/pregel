@@ -15,6 +15,7 @@ addCompilerPlugin("org.scalamacros" %% "paradise" % "2.1.0" cross CrossVersion.f
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.0.0",
   "org.scalaz" %% "scalaz-core" % "7.2.7",
+  "org.typelevel" %% "cats" % "0.9.0",
   "org.apache.spark" %% "spark-core" % "2.0.0"
     exclude("org.glassfish.hk2", "hk2-utils")
     exclude("org.glassfish.hk2", "hk2-locator")
